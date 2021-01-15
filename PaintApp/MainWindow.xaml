@@ -10,9 +10,15 @@
 
 
     <!--GRID-->
-    <Grid>
+    <Grid x:Name="grid_MainGrid">
         <!--Top Menu-->
-        <DockPanel VerticalAlignment="Top" Height="20" Background="Red"/>
+        <DockPanel x:Name="menu_TopMenu" VerticalAlignment="Top" Height="20">
+            <Menu DockPanel.Dock="Top" Background="#FF3E434B" Foreground="#FFFFFA9B" FontFamily="Verdana">
+                <MenuItem Header="File"> <MenuItem Header="Sub1"/> </MenuItem>
+                <MenuItem Header="Close"/>
+                <MenuItem Header="Open"/>
+            </Menu>
+        </DockPanel>
 
         <!--Left-Tool-Panel-->
         <ToolBarPanel x:Name="toolBarPanel_MainLeft" Background="#FF51514F"  HorizontalAlignment="Left" Width="100" Margin="0,20,0,0"/>
