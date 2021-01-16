@@ -7,24 +7,45 @@
         xmlns:local="clr-namespace:PaintApp"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-
+     
 
     <!--GRID-->
     <Grid x:Name="grid_MainGrid">
+
+
         <!--Top Menu-->
-        <DockPanel x:Name="menu_TopMenu" VerticalAlignment="Top" Height="20">
-            <Menu DockPanel.Dock="Top" Background="#FF3E434B" Foreground="#FFFFFA9B" FontFamily="Verdana">
-                <MenuItem Header="File"> <MenuItem Header="Sub1"/> </MenuItem>
+        <DockPanel x:Name="dockPanel_Menu_TopMenu" Style="{StaticResource dockPanel_Menu_TopMenu_Style}">
+            <Menu x:Name="menu_TopMenu" Style="{StaticResource menu_TopMenu_Style}">
+                <MenuItem Header="File" Style="{StaticResource menu_TopMenu_MenuItem_Style}">
+                    <MenuItem Header="Sub1" Style="{StaticResource menu_TopMenu_SubMenuItem_Style}"/>
+                </MenuItem>
+                
                 <MenuItem Header="Close"/>
                 <MenuItem Header="Open"/>
             </Menu>
         </DockPanel>
 
+
+
+
         <!--Left-Tool-Panel-->
-        <ToolBarPanel x:Name="toolBarPanel_MainLeft" Background="#FF51514F"  HorizontalAlignment="Left" Width="100" Margin="0,20,0,0"/>
+        <ToolBarPanel x:Name="toolBarPanel_Left" Style="{StaticResource toolBarPanel_Left_Style }"/>
+
+
+        <!--Top-Tool-Panel-->
+        <ToolBarPanel x:Name="toolBarPanel_Top" Style="{StaticResource toolBarPanel_Top_Style}" />
+        <Border Name="toolBarPanel_Top_Border" Style="{StaticResource toolBarPanel_Top_Border_Style}" />
+
+
+        <!--Top-Mesuring-Bar-->
+        <DockPanel x:Name="dockPanel_MesuringBarTop"  Style="{StaticResource dockPanel_MesuringBarTop_Style}"/>
+
+
+        <!--Left-Mesuring-Bar-->
+        <DockPanel x:Name="dockPanel_MesuringBarLeft" Style="{StaticResource dockPanel_MesuringBarLeft_Style}"/>
+
+
+        <!--Bottom Panel-->
+        <DockPanel x:Name="dockPanel_Bottom" Style="{StaticResource dockPanel_Bottom_Style}"/>
     </Grid>
-
-
-
-
 </Window>
