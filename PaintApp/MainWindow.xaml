@@ -7,7 +7,7 @@
         xmlns:local="clr-namespace:PaintApp"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-     
+
 
     <!--GRID-->
     <Grid x:Name="grid_MainGrid">
@@ -16,10 +16,12 @@
         <!--Top Menu-->
         <DockPanel x:Name="dockPanel_Menu_TopMenu" Style="{StaticResource dockPanel_Menu_TopMenu_Style}">
             <Menu x:Name="menu_TopMenu" Style="{StaticResource menu_TopMenu_Style}">
-                <MenuItem Header="File" Style="{StaticResource menu_TopMenu_MenuItem_Style}">
-                    <MenuItem Header="Sub1" Style="{StaticResource menu_TopMenu_SubMenuItem_Style}"/>
+                <MenuItem Header="File" Template="{DynamicResource MenuItemControlTemplate1}">
+                    <MenuItem Header="Sub1"/>
+                    <MenuItem Header="File" Width="80" Background="Black" Foreground="White" Style="{StaticResource menu_TopMenu_SubMenuItem_Style}"/>
+                      
                 </MenuItem>
-                
+
                 <MenuItem Header="Close"/>
                 <MenuItem Header="Open"/>
             </Menu>
