@@ -9,7 +9,7 @@
         <!--Theme-->
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="maintheme.xaml" />
+                <ResourceDictionary Source="maintheme.xaml"></ResourceDictionary>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>
