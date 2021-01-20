@@ -26,7 +26,7 @@
 
     <!--#3-Top Menu-MenuItem-->
     <Style x:Key="menu_TopMenu_MenuItem_Style" x:Name="mm" TargetType="MenuItem">
-        <Setter Property="Focusable" Value="False"></Setter>
+        <Setter Property="Focusable" Value="false"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate x:Name="menuItem" TargetType="{x:Type MenuItem}">
@@ -70,12 +70,12 @@
                             <Setter Property="Visibility" TargetName="Icon" Value="Collapsed"/>
                         </Trigger>
                         <Trigger Property="IsHighlighted" Value="True">
-                            <Setter Property="Background" TargetName="templateRoot" Value="#E5F02727"/>
+                            <Setter Property="Background" TargetName="templateRoot" Value="#E530F027"/>
                             <Setter Property="BorderBrush" TargetName="templateRoot" Value="#FFFF0808"/>
                         </Trigger>
                         <Trigger Property="IsEnabled" Value="False">
-                            <Setter Property="TextElement.Foreground" TargetName="templateRoot" Value="#FF00FF2E"/>
-                            <Setter Property="Fill" TargetName="GlyphPanel" Value="Red"/>
+                            <Setter Property="TextElement.Foreground" TargetName="templateRoot" Value="#FFB7D8FF"/>
+                            <Setter Property="Fill" TargetName="GlyphPanel" Value="#FFB500F9"/>
                         </Trigger>
                         <Trigger Property="CanContentScroll" SourceName="SubMenuScrollViewer" Value="False">
                             <Setter Property="Canvas.Top" TargetName="OpaqueRect" Value="{Binding VerticalOffset, ElementName=SubMenuScrollViewer}"/>
@@ -84,8 +84,12 @@
                             <Setter TargetName="templateRoot" Property="Background" Value="red" />
                         </Trigger>
 
-                        <Trigger Property="IsMouseOver" Value="false">
+                        <Trigger Property="IsMouseOver" Value="False">
                             <Setter Property="IsOpen" TargetName="PART_Popup" Value="false"/>
+                            <Setter Property="Cursor" Value="Hand"/>
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="IsOpen" TargetName="PART_Popup" Value="true"/>
                             <Setter Property="Cursor" Value="Hand"/>
                         </Trigger>
                     </ControlTemplate.Triggers>
