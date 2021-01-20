@@ -18,10 +18,8 @@
             <Menu x:Name="menu_TopMenu" Style="{StaticResource menu_TopMenu_Style}">
                 <MenuItem Header="File" Template="{DynamicResource MenuItemControlTemplate1}">
                     <MenuItem Header="Sub1"/>
-                    <MenuItem Header="File" Width="80" Background="Black" Foreground="White" Style="{StaticResource menu_TopMenu_SubMenuItem_Style}"/>
-                      
+                    <MenuItem Header="File"/>
                 </MenuItem>
-
                 <MenuItem Header="Close"/>
                 <MenuItem Header="Open"/>
             </Menu>
