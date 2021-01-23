@@ -18,11 +18,15 @@
             <Menu x:Name="menu_TopMenu" Style="{DynamicResource menu_TopMenu_Style}">
 
                 <MenuItem Header="File" Style="{DynamicResource menu_TopMenu_MenuItem_Style}">
-                    <MenuItem Header="Sub1"/>
-                    <MenuItem Header="File"/>
+                    <MenuItem Header="Sub1" />
+                    <MenuItem  Header="File1"/>
+                    <MenuItem  Header="File2"/>
+                    <MenuItem  Header="File3"/>
+                    <MenuItem  Header="File4"/>
+                    <MenuItem  Header="File5"/>
                 </MenuItem>
-                <MenuItem Header="Close"/>
-                <MenuItem Header="Open"/>
+                <MenuItem Header="Close" Style="{DynamicResource menu_TopMenu_MenuItem_Style}"/>
+                <MenuItem Header="Open" Style="{DynamicResource menu_TopMenu_MenuItem_Style}"/>
             </Menu>
         </DockPanel>
 
