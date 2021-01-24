@@ -41,14 +41,14 @@
     
     
     
-    <!--#3-Top Menu-MenuItem-->
+    <!--#3-Top Menu - MenuItem-->
     <Style x:Key="menu_TopMenu_MenuItem_Style" TargetType="{x:Type MenuItem}">
         <!--<Setter Property="Focusable" Value="false"/>-->
              
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate x:Name="menuItem" TargetType="{x:Type MenuItem}">
-                    <Border x:Name="templateRoot" BorderBrush="Red" BorderThickness="0" CornerRadius="1" Background="#383838" SnapsToDevicePixels="True">
+                    <Border x:Name="templateRoot" BorderBrush="Red" BorderThickness="0" CornerRadius="1"  SnapsToDevicePixels="True">
                         <Grid VerticalAlignment="Center">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="Auto"/>
@@ -66,7 +66,7 @@
                                   Background="Blue" Margin="0" Padding="0">
                                         <Grid  RenderOptions.ClearTypeHint="Enabled">   
                                             <Canvas HorizontalAlignment="Left" Height="0" VerticalAlignment="Top" Width="0">
-                                                <Rectangle x:Name="OpaqueRect" Stroke="Red"  RadiusX="5" RadiusY="5" StrokeThickness="1" Height="{Binding ActualHeight, ElementName=SubMenuBorder}" Width="{Binding ActualWidth, ElementName=SubMenuBorder}">
+                                                <Rectangle x:Name="OpaqueRect" Stroke="#8a919c"  RadiusX="5" RadiusY="5" StrokeThickness="1" Height="{Binding ActualHeight, ElementName=SubMenuBorder}" Width="{Binding ActualWidth, ElementName=SubMenuBorder}">
                                                     <Rectangle.Fill>
                                                     <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
                                                             <GradientStop Color="#FF404957" Offset="0.144"/>
@@ -141,10 +141,9 @@
         
         
 
-        <!--SUB - MenuItems-->
+        <!--Top - Menu - SUB - MenuItems-->
         <Style.Resources>
-            <Style TargetType="MenuItem">
-
+            <Style TargetType="{x:Type MenuItem}">
                 <Setter Property="OverridesDefaultStyle" Value="True"/>
                 <Setter Property="SnapsToDevicePixels" Value="True"/>
                 <Setter Property="Template">
@@ -155,56 +154,69 @@
                                     <ContentPresenter x:Name="HeaderHost" ContentSource="Header" RecognizesAccessKey="True">
                                         <ContentPresenter.ContentTemplate>
                                             <DataTemplate>
-                                                <TextBlock Padding="30, 10,30, 10" Height="35"  Text="{Binding BindsDirectlyToSource=True}"/>
+                                                <!--<Border BorderBrush="#FF60626A" BorderThickness="0, 0, 0, 1"  Margin="10, 0, 10, -5">-->
+                                                <TextBlock Padding="30, 1,30, 5"  Text="{Binding BindsDirectlyToSource=True}"/>
+                                                <!--</Border>-->
                                             </DataTemplate>
-                                        </ContentPresenter.ContentTemplate>
-                                    </ContentPresenter>
+                                        </ContentPresenter.ContentTemplate>  
+                                    </ContentPresenter>    
                                 </Grid>
-                                </Border>
+                            </Border>
 
 
                             
                             <ControlTemplate.Triggers>
                                 <Trigger Property="IsHighlighted" Value="True">
-                                    <Setter Property="Background" TargetName="bv" Value="Yellow"/>
+                                    <Setter Property="Background" TargetName="bv" Value="#91cde3"/>
                                     <!--<Setter Property="BorderBrush" TargetName="bv" Value="#FF26A0DA"/>-->
                                 </Trigger>
-                            </ControlTemplate.Triggers>
-
-
-                        </ControlTemplate>
-                    </Setter.Value>
-                </Setter>
-
+                            </ControlTemplate.Triggers>  
+                        </ControlTemplate>    
+                    </Setter.Value>  
+                </Setter>   
             </Style>
-        </Style.Resources>
+        </Style.Resources>     
     </Style>
 
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
+
+    <!--Top - Menu Seperator-->
+    <Style x:Key="menu_TopMenu_Seperator_Style" TargetType="{x:Type Separator}">
+        <Setter Property="Background" Value="Red"/>
+        <Setter Property="Margin" Value="10,1,10,1"/>
+        <Setter Property="Focusable" Value="false"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Separator}">
+                    <Border 
+                        BorderBrush="#FF6A667E" 
+                        BorderThickness="1" 
+                        Background="Red"
+                        Height="1" 
+                        SnapsToDevicePixels="true"/>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+
+
+
+
+
+
+
+
+
+
+
+
     <!--#4 -SubMenuItems-->
     <!--<Style x:Key="menu_TopMenu_Sub_MenuItem_Style" TargetType="{x:Type MenuItem}">
         --><!--<Setter Property="Template">
