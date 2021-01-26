@@ -13,6 +13,7 @@
     <Grid x:Name="grid_MainGrid">
 
 
+
         <!--Top Menu-->
         <DockPanel x:Name="dockPanel_Menu_TopMenu" Style="{DynamicResource dockPanel_Menu_TopMenu_Style}">
             <Menu x:Name="menu_TopMenu" Style="{DynamicResource menu_TopMenu_Style}">
@@ -23,7 +24,7 @@
                     <MenuItem Header="Open"/>
                     <Separator Style="{DynamicResource menu_TopMenu_Seperator_Style}"/>
                     <MenuItem  Header="Save"/>
-             
+
                 </MenuItem>
                 <MenuItem Header="Close" Style="{DynamicResource menu_TopMenu_MenuItem_Style}"/>
                 <MenuItem Header="Open" Style="{DynamicResource menu_TopMenu_MenuItem_Style}"/>
@@ -31,13 +32,13 @@
         </DockPanel>
 
 
-        
 
-        <!--Left-Tool-Panel-->
+
+        <!-- :::LEFT:: - Left-Tool-Panel-->
         <ToolBarPanel x:Name="toolBarPanel_Left" Style="{StaticResource toolBarPanel_Left_Style }"/>
 
 
-        <!--Top-Tool-Panel-->
+        <!--::: TOP::: - Top-Tool-Panel-->
         <ToolBarPanel x:Name="toolBarPanel_Top" Style="{StaticResource toolBarPanel_Top_Style}" />
         <Border Name="toolBarPanel_Top_Border" Style="{StaticResource toolBarPanel_Top_Border_Style}" />
 
@@ -50,7 +51,62 @@
         <DockPanel x:Name="dockPanel_MesuringBarLeft" Style="{StaticResource dockPanel_MesuringBarLeft_Style}"/>
 
 
-        <!--Bottom Panel-->
+        <!--::: BOTTOM:: - Bottom Panel-->
         <DockPanel x:Name="dockPanel_Bottom" Style="{StaticResource dockPanel_Bottom_Style}"/>
+
+
+
+        <!-- :::MIDDLE::: WorkSpace - Grid-->
+        <Grid Margin="120,78,0,20" Background="#FFD7D9FD">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <!--Rigth Resizable - Panel Grid-->
+                <ColumnDefinition Width="200"/>
+            </Grid.ColumnDefinitions>
+            <GridSplitter Background="Blue" Width="10" HorizontalAlignment="Right" VerticalAlignment="Stretch" ResizeBehavior="CurrentAndNext"/>
+            <DockPanel LastChildFill="False" Background="#FF5BAE90" Grid.Column="2" >
+                <Button Content="Button" Width="75" Margin="50,188,0,73" HorizontalAlignment="Center" VerticalAlignment="Center" Height="61">
+                    <Button.Background>
+                        <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                            <GradientStop Color="#FFF3F3F3" Offset="0"/>
+                            <GradientStop Color="#FFEBEBEB" Offset="0.5"/>
+                            <GradientStop Color="#FFDDDDDD" Offset="0.5"/>
+                            <GradientStop Color="#FF6A3636" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Button.Background>
+                </Button>
+            </DockPanel>
+
+
+        </Grid>
+
+        <!--Right - Panel-->
+
+        <!--<GridSplitter Background="Blue" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" ResizeBehavior="PreviousAndNext" Margin="682,78,100,20"/>
+        <DockPanel LastChildFill="False" Margin="692,78,0,20" Background="#FF5BAE90">
+
+
+        </DockPanel>-->
+
+
+
+
+        <!--Test Grid Splitter-->
+        <!--<Grid Background="Red" Margin="692,78,0,20">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <GridSplitter Width="5" HorizontalAlignment="Right" VerticalAlignment="Stretch" ResizeBehavior="CurrentAndNext"/>
+            <DockPanel Background="Bisque" Grid.Column="1" Name="dockPanel_2">
+                <StackPanel />
+                <DockPanel />
+            </DockPanel>
+        </Grid>-->
+
+
+
     </Grid>
 </Window>
