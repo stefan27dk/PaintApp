@@ -11,9 +11,7 @@
 
     <!--GRID-->
     <Grid x:Name="grid_MainGrid">
-
-
-
+            
         <!--Top Menu-->
         <DockPanel x:Name="dockPanel_Menu_TopMenu" Style="{DynamicResource dockPanel_Menu_TopMenu_Style}">
             <Menu x:Name="menu_TopMenu" Style="{DynamicResource menu_TopMenu_Style}">
@@ -24,6 +22,21 @@
                     <MenuItem Header="Open"/>
                     <Separator Style="{DynamicResource menu_TopMenu_Seperator_Style}"/>
                     <MenuItem  Header="Save"/>
+                    <Separator Style="{DynamicResource menu_TopMenu_Seperator_Style}"/>
+                    <MenuItem  Header="Save"/>
+                    <Separator Style="{DynamicResource menu_TopMenu_Seperator_Style}"/>
+                    <MenuItem  Header="Save"/>
+                    <Separator Style="{DynamicResource menu_TopMenu_Seperator_Style}"/>
+                    <MenuItem  Header="Save"/>
+                    <Separator Style="{DynamicResource menu_TopMenu_Seperator_Style}"/>
+                    <MenuItem  Header="Save"/>
+                    <Separator Style="{DynamicResource menu_TopMenu_Seperator_Style}"/>
+                    <MenuItem  Header="Save"/>
+                    <Separator Style="{DynamicResource menu_TopMenu_Seperator_Style}"/>
+                    <MenuItem  Header="Save"/>
+                    <Separator Style="{DynamicResource menu_TopMenu_Seperator_Style}"/>
+                    <MenuItem  Header="Save"/>
+                    
 
                 </MenuItem>
                 <MenuItem Header="Close" Style="{DynamicResource menu_TopMenu_MenuItem_Style}"/>
