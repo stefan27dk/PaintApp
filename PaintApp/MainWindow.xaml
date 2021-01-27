@@ -64,16 +64,16 @@
         <Grid Margin="120,78,0,20" Background="#FFD7D9FD">
 
             <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
+                <ColumnDefinition MinWidth="200" />
                 <!--Rigth Resizable - Panel Grid-->
-                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="200" MinWidth="50" MaxWidth="300"/>
             </Grid.ColumnDefinitions>
 
             <!--Rigth ToolPanel - Splitter-->
-            <GridSplitter Background="Blue" Width="10" HorizontalAlignment="Right" VerticalAlignment="Stretch" ResizeBehavior="CurrentAndNext"/>
+            <GridSplitter Style="{DynamicResource gridSplitter_rightToolPanel_Splitter_Style}"/>
 
             <!--::Rigth ToolPanel::-->
-            <DockPanel LastChildFill="False" Background="#FF5BAE90" Grid.Column="2" >
+            <DockPanel Style="{DynamicResource dockPanel_rightToolPanel_Style }" >
                 <!--::Rigth ToolPanel  - Content::-->
                 <Button Content="Button" Width="75" Margin="50,188,0,73" HorizontalAlignment="Center" VerticalAlignment="Center" Height="61">
                     <Button.Background>

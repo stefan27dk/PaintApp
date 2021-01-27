@@ -3,8 +3,7 @@
                      x:Class="PaintApp.maintheme"
                     xmlns:local="clr-namespace:PaintApp">
 
-
-
+    <!--========================================= ::START:: - TOP - MENU =========================================-->
     <!--:: #1 - Top Menu-DockPanel ::-->
     <Style x:Key="dockPanel_Menu_TopMenu_Style" TargetType="{x:Type DockPanel}">
         <Setter Property="VerticalAlignment" Value="Top"/>
@@ -170,10 +169,9 @@
 
 
 
-
-
-
-
+          
+    
+    
 
     <!--:: Top Menu-Seperator ::-->
     <Style x:Key="menu_TopMenu_Seperator_Style" TargetType="{x:Type Separator}">
@@ -192,10 +190,15 @@
         </Setter>
     </Style>
 
+    <!--========================================= ::END:: - TOP - MENU =========================================-->
 
 
 
+    
+    
+    
 
+    <!--:: LEFT ::-->
     <!--:: Left-Tool-Panel ::-->
     <Style x:Key="toolBarPanel_Left_Style" TargetType="{x:Type ToolBarPanel}">
         <Setter Property="Background" Value="#FF51514F"/>
@@ -206,6 +209,22 @@
 
 
 
+
+    <!--MesuringBar - Left-->
+    <Style x:Key="dockPanel_MesuringBarLeft_Style" TargetType="{x:Type DockPanel}">
+        <Setter Property="Background" Value="Lime"/>
+        <Setter Property="Margin" Value="100,78,0,20"/>
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+        <Setter Property="Width" Value="20"/>
+    </Style>
+
+
+    
+    
+    
+
+
+    <!--:: TOP ::-->
     <!--#1 - Top-Tool-Panel-->
     <Style x:Key="toolBarPanel_Top_Style" TargetType="{x:Type ToolBarPanel}">
         <Setter Property="Background" Value="#FF3F4757"/>
@@ -238,20 +257,43 @@
 
 
     
-    <!--MesuringBar - Left-->
-    <Style x:Key="dockPanel_MesuringBarLeft_Style" TargetType="{x:Type DockPanel}">
-        <Setter Property="Background" Value="Lime"/>
-        <Setter Property="Margin" Value="100,78,0,20"/>
-        <Setter Property="HorizontalAlignment" Value="Left"/>
-        <Setter Property="Width" Value="20"/>
+    
+
+
+
+    <!--:: RIGHT ::-->
+    <!--:: RIGHT - ToolPanel - Splitter ::-->
+    <Style x:Key="gridSplitter_rightToolPanel_Splitter_Style" TargetType="{x:Type GridSplitter}">
+        <Setter Property="Background" Value="Blue"/>
+        <Setter Property="Width" Value="10"/>
+        <Setter Property="HorizontalAlignment" Value="Right"/>
+        <Setter Property="VerticalAlignment" Value="Stretch"/>
+        <Setter Property="ResizeBehavior" Value="CurrentAndNext"/>
     </Style>
 
 
-    
+
+
+    <!--:: RIGHT - ToolPanel ::-->
+    <Style x:Key="dockPanel_rightToolPanel_Style" TargetType="{x:Type DockPanel}">
+        <Setter Property="Grid.Column" Value="2"/>
+        <Setter Property="LastChildFill" Value="False"/>
+        <Setter Property="Background" Value="#FF5BAE90"/>
+    </Style>
+
+
+
+
+
+    <!--:: BOTTOM ::-->
     <!--Bottom Panel-->
     <Style x:Key="dockPanel_Bottom_Style" TargetType="{x:Type DockPanel}">
         <Setter Property="Background" Value="Orange"/>
         <Setter Property="Height" Value="20"/>
         <Setter Property="VerticalAlignment" Value="Bottom"/>
     </Style>
+    
+    
+    
+    
 </ResourceDictionary>
