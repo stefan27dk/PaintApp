@@ -66,7 +66,7 @@
             <Grid.ColumnDefinitions>
                 <ColumnDefinition MinWidth="200" />
                 <!--Rigth Resizable - Panel Grid-->
-                <ColumnDefinition Width="200" MinWidth="50" MaxWidth="300"/>
+                <ColumnDefinition Width="200" MinWidth="50" MaxWidth="400"/>
             </Grid.ColumnDefinitions>
 
             <!--Rigth ToolPanel - Splitter-->
