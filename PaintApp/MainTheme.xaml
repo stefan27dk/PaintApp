@@ -3,6 +3,21 @@
                      x:Class="PaintApp.maintheme"
                     xmlns:local="clr-namespace:PaintApp">
 
+    
+    <!--======= Window =======-->
+    <Style x:Key="main_Window_Style" TargetType="{x:Type Window}">
+        <Setter Property="MinHeight" Value="400"/>
+        <Setter Property="MinWidth" Value="500"/>
+        <Setter Property="Height" Value="450"/>
+        <Setter Property="Width" Value="800"/>
+        <Setter Property="Title" Value="Picture Editor V1.1"/>
+    </Style>
+    
+    
+    
+    
+    
+    
     <!--========================================= ::START:: - TOP - MENU =========================================-->
     <!--:: #1 - Top Menu-DockPanel ::-->
     <Style x:Key="dockPanel_Menu_TopMenu_Style" TargetType="{x:Type DockPanel}">
@@ -198,7 +213,7 @@
     
     
 
-    <!--:: LEFT ::-->
+    <!--:: =========== LEFT =========== ::-->
     <!--:: Left-Tool-Panel ::-->
     <Style x:Key="toolBarPanel_Left_Style" TargetType="{x:Type ToolBarPanel}">
         <Setter Property="Background" Value="#FF51514F"/>
@@ -222,9 +237,10 @@
     
     
     
+    
 
 
-    <!--:: TOP ::-->
+    <!--:: ========== TOP ========= ::-->
     <!--#1 - Top-Tool-Panel-->
     <Style x:Key="toolBarPanel_Top_Style" TargetType="{x:Type ToolBarPanel}">
         <Setter Property="Background" Value="#FF3F4757"/>
@@ -258,10 +274,18 @@
 
     
     
+    
+       <!--:: ======== Middle ========= ::-->
+       <!--Middle - Workspace-->
+    <Style x:Key="grid_Middle_Workspace_ColumnDefinition_Style" TargetType="{x:Type ColumnDefinition}">
+        <Setter Property="MinWidth" Value="200"/>
+    </Style>
 
 
-
-    <!--:: RIGHT ::-->
+    
+    
+    
+    <!--:: ========= RIGHT ========= ::-->
     <!--:: RIGHT - ToolPanel - Splitter ::-->
     <Style x:Key="gridSplitter_rightToolPanel_Splitter_Style" TargetType="{x:Type GridSplitter}">
         <Setter Property="Background" Value="Blue"/>
@@ -271,9 +295,21 @@
         <Setter Property="ResizeBehavior" Value="CurrentAndNext"/>
     </Style>
 
+    
+    
 
+    
+    <!--:: RIGHT - ToolPanel - GRID ::-->
+    <Style x:Key="grid_Right_TollPanel_ColumnDefinition_Style" TargetType="{x:Type ColumnDefinition}">
+        <Setter Property="Width" Value="200"/>
+        <Setter Property="MinWidth" Value="50"/>
+        <Setter Property="MaxWidth" Value="400"/>
+    </Style>
 
+    
+    
 
+    
     <!--:: RIGHT - ToolPanel ::-->
     <Style x:Key="dockPanel_rightToolPanel_Style" TargetType="{x:Type DockPanel}">
         <Setter Property="Grid.Column" Value="2"/>
@@ -285,7 +321,7 @@
 
 
 
-    <!--:: BOTTOM ::-->
+    <!--:: ========== BOTTOM ========== ::-->
     <!--Bottom Panel-->
     <Style x:Key="dockPanel_Bottom_Style" TargetType="{x:Type DockPanel}">
         <Setter Property="Background" Value="Orange"/>

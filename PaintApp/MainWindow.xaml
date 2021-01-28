@@ -1,12 +1,11 @@
 ﻿<!--Window-->
-<Window x:Class="PaintApp.MainWindow"
+<Window Style="{DynamicResource main_Window_Style}" x:Class="PaintApp.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PaintApp"
-        mc:Ignorable="d"   
-        Title="MainWindow" Height="450" Width="800">
+        mc:Ignorable="d" >
 
 
     <!--GRID-->
@@ -60,18 +59,20 @@
         
         
 
-        <!-- :::MIDDLE::: WorkSpace - Grid-->
+        <!-- :::MIDDLE::: WorkSpace / Right ToolPanel - Grid-->
         <Grid Margin="120,78,0,20" Background="#FFD7D9FD">
-
             <Grid.ColumnDefinitions>
-                <ColumnDefinition MinWidth="200" />
-                <!--Rigth Resizable - Panel Grid-->
-                <ColumnDefinition Width="200" MinWidth="50" MaxWidth="400"/>
+            <!--Workspace - Grid-->
+                <ColumnDefinition Style="{DynamicResource grid_Middle_Workspace_ColumnDefinition_Style}"/>  
+                <!--Right Resizable - Panel Grid-->
+                <ColumnDefinition Style="{DynamicResource grid_Right_TollPanel_ColumnDefinition_Style}"/>
             </Grid.ColumnDefinitions>
 
             <!--Rigth ToolPanel - Splitter-->
             <GridSplitter Style="{DynamicResource gridSplitter_rightToolPanel_Splitter_Style}"/>
 
+            
+            
             <!--::Rigth ToolPanel::-->
             <DockPanel Style="{DynamicResource dockPanel_rightToolPanel_Style }" >
                 <!--::Rigth ToolPanel  - Content::-->
